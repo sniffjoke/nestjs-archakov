@@ -1,6 +1,12 @@
 import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
 import {FileEntity} from "../../files/entities/file.entity";
 
+export enum FileType {
+    PHOTOS = 'photos',
+    TRASH = 'trash'
+}
+
+
 @Entity('users')
 export class UserEntity {
     @PrimaryGeneratedColumn()
